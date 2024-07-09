@@ -1,0 +1,16 @@
+{"thingstodo":
+[
+    {
+        "task": "clean house",
+        "status": "to-do"
+    },
+    {
+        "task": "practice coding",
+        "status": "done"
+    },
+    {
+        "task": "walk the dog",
+        "status": "done"
+    }
+]
+}
