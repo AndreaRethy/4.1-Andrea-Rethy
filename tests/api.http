@@ -1,0 +1,10 @@
+### Show all tasks on to do list
+GET http://localhost:1234/todo
+
+### Add new task
+POST http://localhost:1234/new-task
+Content-Type: application/json
+
+{
+    "task": "Buy cinema tickets"
+}
