@@ -32,13 +32,11 @@ Example output:
 ]
 ```
 
-
-
 ### Add a new item
 
 Only add the task name, the rest is auto-filled.
 
-Example: 
+Example:
 
 ```
 POST http://localhost:1234/new-task
@@ -49,7 +47,6 @@ Content-Type: application/json
 }
 ```
 
-
 This should give an example output:
 
 ```
@@ -59,7 +56,6 @@ This should give an example output:
   "status": "to-do"
 }
 ```
-
 
 ### Edit an item
 
@@ -76,7 +72,6 @@ Content-Type: application/json
 }
 ```
 
-
 Example output:
 
 ```
@@ -86,8 +81,6 @@ Example output:
   "status": "done"
 }
 ```
-
-
 
 ### Delete an item
 
@@ -104,3 +97,22 @@ The program will give a feedback if it was successful:
   "message": "Task deleted"
 }
 ```
+
+
+## How to test the API
+
+1. Make sure you have the extension REST Client installed:
+
+```
+Name: REST Client
+Id: humao.rest-client
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+```
+
+2. Open the project folder in your terminal and start the server with the following command:
+
+```
+npm run dev
+```
+
+3. Open the api.http file and click on "Send request" on the request you wan to test. Feel free to change the example data.
