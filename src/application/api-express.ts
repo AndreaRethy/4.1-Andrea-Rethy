@@ -1,9 +1,10 @@
+const { Task } = require('../domain/entities/Task.js')
 const express = require('express');
 const crypto = require('node:crypto');
 const { validateTodo, validatePartialTodo } = require('./schemas/tasks.ts');
 
 const app = express();
-const toDoList = require('./todo.json');
+const toDoList = require('../infrastructure/todo.json');
 const PORT = process.env.PORT ?? 1234;
 
 app.disable('x-powered-by');
@@ -30,6 +31,8 @@ app.post('/new-task', (req, res) => {
         ...result.data,
         status: "to-do"
     }
+
+    // const newTask = new Task(result.data)
 
     toDoList.push(newTask)
 

@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "dev": "node --watch src/infrastructure/api-express.ts"
+    "dev": "node --watch src/application/api-express.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "jest": "^29.7.0",
     "ts-jest": "^29.2.2"
   },
+  
   "dependencies": {
     "express": "4.19.2",
     "zod": "3.23.8"

@@ -1,11 +1,12 @@
-export class Task {
-    id: string
+const crypto = require('node:crypto');
+class Task {
+    id = crypto.randomUUID()
     task: string
-    status: string
+    status: "to-do"
 
-    constructor(id: string, task: string, status: string) {
-        this.id = id
+    constructor(task: string) {
         this.task = task
-        this.status = status
     }
 }
+
+export default Task
