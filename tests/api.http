@@ -6,5 +6,16 @@ POST http://localhost:1234/new-task
 Content-Type: application/json
 
 {
-    "task": "Buy cinema tickets"
+    "task": "Entregar API"
 }
+
+### Update task
+PATCH http://localhost:1234/todo/4b196eb2-7292-4c44-bc53-c6b367b4a0f1
+Content-Type: application/json
+
+{
+    "status": "done"
+}
+
+### Delete task: preselected id of "practice coding"
+DELETE http://localhost:1234/todo/c4b2eb63-60ae-44ea-a6e2-52666a0c3a0f
