@@ -98,7 +98,6 @@ The program will give a feedback if it was successful:
 }
 ```
 
-
 ## How to test the API
 
 1. Make sure you have the extension REST Client installed:
@@ -115,4 +114,4 @@ VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=humao.r
 npm run dev
 ```
 
-3. Open the api.http file and click on "Send request" on the request you wan to test. Feel free to change the example data.
+3. Open the ./RESTClient/api.http file and click on "Send request" on the request you want to test. Feel free to change the example data.
