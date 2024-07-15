@@ -1,4 +1,5 @@
-const { Task } = require('../domain/entities/Task.ts')
+// const { Task } = require('../domain/entities/Task.ts')
+import Task from '../domain/entities/Task';
 const express = require('express');
 // const crypto = require('node:crypto');
 // const { validateTodo, validatePartialTodo } = require('./schemas/tasks.ts');

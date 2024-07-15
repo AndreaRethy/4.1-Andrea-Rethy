@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "dev": "ts-node src/application/api-express.ts"
+    "dev": "ts-node src/application/api-express.ts",
+    "start": "node --watch dist/application/api-express.js"
   },
   "keywords": [],
   "author": "",
