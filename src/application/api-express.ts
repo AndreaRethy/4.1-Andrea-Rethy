@@ -46,7 +46,8 @@ app.delete('/todo/:id', (req, res) => {
       return res.status(404).json({ message: 'Task not found' })
     }
   
-    toDoList.splice(taskIndex, 1)
+    // toDoList.splice(taskIndex, 1)
+    
   
     return res.json({ message: 'Task deleted' })
 });

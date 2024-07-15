@@ -21,6 +21,10 @@ class Task {
     addNewTask(toDoList: Task[]): void {
         toDoList.push(this);
     }
+
+    deleteTask(toDoList: Task[], index: number): void {
+        toDoList.splice(index, 1)
+    }
 }
 
 export default Task;
