@@ -26,4 +26,4 @@ function validatePartialTodo (input) {
     return taskSchemaPartial.partial().safeParse(input)
 }
 
-module.exports = { validateTodo, validatePartialTodo }
+export default { validateTodo, validatePartialTodo }
