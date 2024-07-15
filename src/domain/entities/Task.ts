@@ -1,11 +1,11 @@
 const crypto = require('node:crypto');
 class Task {
     id = crypto.randomUUID();
-    task: string;
+    taskToDo: string;
     status: string;
 
-    constructor(task: string) {
-        this.task = task;
+    constructor(taskToDo: string) {
+        this.taskToDo = taskToDo;
         this.status = "to-do";
     }
 
