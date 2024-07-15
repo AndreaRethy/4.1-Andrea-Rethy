@@ -4,11 +4,13 @@ const express = require('express');
 // const crypto = require('node:crypto');
 // const { validateTodo, validatePartialTodo } = require('./schemas/tasks.ts');
 import { validateTodo, validatePartialTodo } from './schemas/tasks';
+import toDoList from '../infrastructure/todo';
 
 
 const app = express();
-const toDoList = require('../infrastructure/todo.json');
+// const toDoList = require('../infrastructure/todo.json');
 const PORT = process.env.PORT ?? 1234;
+
 
 app.disable('x-powered-by');
 app.use(express.json());
@@ -34,7 +36,7 @@ app.post('/new-task', (req, res) => {
     //     ...result.data,
     //     status: "to-do"
     // }
-
+    
     const newTask = new Task(result.data)
     newTask.addNewTask(toDoList)
     
