@@ -7,10 +7,9 @@
         "strict": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "noEmit": true,
         "noImplicitAny": false,
         "skipLibCheck": true /* Skip type checking all .d.ts files. */
     },
-    "include": ["./src/**/*.ts", "src/domain/entities/Task.ts"],
+    "include": ["src/**/*.ts"],
     "exclude": ["node_modules", "dist"]
 }
