@@ -1,7 +1,9 @@
 const { Task } = require('../domain/entities/Task.ts')
 const express = require('express');
 // const crypto = require('node:crypto');
-const { validateTodo, validatePartialTodo } = require('./schemas/tasks.ts');
+// const { validateTodo, validatePartialTodo } = require('./schemas/tasks.ts');
+import { validateTodo, validatePartialTodo } from './schemas/tasks';
+
 
 const app = express();
 const toDoList = require('../infrastructure/todo.json');

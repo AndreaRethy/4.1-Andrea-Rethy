@@ -18,12 +18,13 @@ const taskSchemaPartial = z.object({
     })
 });
 
-function validateTodo (task) {
+export function validateTodo (task) {
     return taskSchema.safeParse(task)
 }
 
-function validatePartialTodo (input) {
+export function validatePartialTodo (input) {
     return taskSchemaPartial.partial().safeParse(input)
 }
 
-export default { validateTodo, validatePartialTodo }
+// export default { validateTodo, validatePartialTodo }
+// module.exports = { validateTodo, validatePartialTodo };
