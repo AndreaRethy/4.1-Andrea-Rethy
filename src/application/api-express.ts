@@ -30,20 +30,9 @@ app.post('/new-task', (req, res) => {
     if (result.error) {
         return res.status(400).json({ error: result.error.message })
     }
-// put this in a class method
-    // const newTask = {
-    //     id: crypto.randomUUID(),
-    //     ...result.data,
-    //     status: "to-do"
-    // }
     
     const newTask = new Task(result.data)
     newTask.addNewTask(toDoList)
-    
-    // Task.addNewTask(toDoList, result.data)
-
-    // toDoList.push(newTask)
-    // until here
 
     res.status(201).json(newTask);
 });

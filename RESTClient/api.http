@@ -6,16 +6,16 @@ POST http://localhost:1234/new-task
 Content-Type: application/json
 
 {
-    "task": "Entregar API"
+    "task": "Create an API server"
 }
 
-### Update task
-PATCH http://localhost:1234/todo/4b196eb2-7292-4c44-bc53-c6b367b4a0f1
+### Update task: Copy an id from GET and replace "id" in request
+PATCH http://localhost:1234/todo/id
 Content-Type: application/json
 
 {
     "status": "done"
 }
 
-### Delete task: preselected id of "practice coding"
-DELETE http://localhost:1234/todo/c4b2eb63-60ae-44ea-a6e2-52666a0c3a0f
+### Delete task: Copy an id from GET and replace "id" in request
+DELETE http://localhost:1234/todo/id
