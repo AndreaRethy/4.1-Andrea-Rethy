@@ -32,7 +32,7 @@ app.post('/new-task', (req, res) => {
     }
     
     const newTask = new Task(result.data)
-    newTask.addNewTask(toDoList)
+    toDoList.addNewTask(newTask)
 
     res.status(201).json(newTask);
 });
@@ -40,15 +40,17 @@ app.post('/new-task', (req, res) => {
 // DELETE
 app.delete('/todo/:id', (req, res) => {
     const { id } = req.params
-    const taskIndex = toDoList.findIndex(task => task.id === id)
+    // const taskIndex = toDoList.findIndex(task => task.id === id)
   
-    if (taskIndex === -1) {
-      return res.status(404).json({ message: 'Task not found' })
+    // if (taskIndex === -1) {
+    //   return res.status(404).json({ message: 'Task not found' })
+    // }
+   
+    if (toDoList.deleteTask(id) == 404) {
+        return res.status(404).json({ message: 'Task not found' })
     }
-  
-    // toDoList.splice(taskIndex, 1)
-    
-  
+
+    toDoList.deleteTask(id)
     return res.json({ message: 'Task deleted' })
 });
 
@@ -61,18 +63,14 @@ app.patch('/todo/:id', (req, res) => {
     }
 
     const { id } = req.params
-    const taskIndex = toDoList.findIndex(task => task.id === id)
-    
-    if (taskIndex === -1) return res.status(404).json({ message: 'task not found' })
+    // const updateTask = toDoList.updateTask(id, result.data)
 
-    const updateTask = {
-        ...toDoList[taskIndex],
-        ...result.data
+    if (toDoList.updateTask(id, result.data) === -1) {
+        return res.status(404).json({ message: 'task not found' })
     }
 
-    toDoList[taskIndex] = updateTask
-
-    return res.json(updateTask)
+    toDoList.updateTask(id, result.data)
+    return res.json(toDoList.toDoList[toDoList.updateTask(id, result.data)])
 });
 
 // NOT FOUND

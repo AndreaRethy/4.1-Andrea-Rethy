@@ -9,7 +9,7 @@ Content-Type: application/json
     "task": "Create an API server"
 }
 
-### Update task: Copy an id from GET and replace "id" in request
+### Update task: Copy an id from GET and replace "id" in request, for example: http://localhost:1234/todo/1f8f6bc1-015e-4dd3-9be3-4638099e32f0
 PATCH http://localhost:1234/todo/id
 Content-Type: application/json
 
@@ -17,5 +17,5 @@ Content-Type: application/json
     "status": "done"
 }
 
-### Delete task: Copy an id from GET and replace "id" in request
+### Delete task: Copy an id from GET and replace "id" in request, for example: http://localhost:1234/todo/da5e5951-3e06-4bef-a7a0-dc652ddfbb6b
 DELETE http://localhost:1234/todo/id

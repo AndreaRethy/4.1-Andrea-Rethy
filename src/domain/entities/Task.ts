@@ -18,13 +18,10 @@ class Task {
         Object.assign(this, data);
     }
 
-    addNewTask(toDoList: Task[]): void {
-        toDoList.push(this);
-    }
+    // addNewTask(toDoList: Task[]): void {
+    //     toDoList.push(this);
+    // }
 
-    deleteTask(toDoList: Task[], index: number): void {
-        toDoList.splice(index, 1)
-    }
 }
 
 export default Task;
