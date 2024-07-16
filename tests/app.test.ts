@@ -27,6 +27,8 @@ describe('New To Do List', () => {
       const task3 = new Task({ "task" : "test task 3" });
       toDoList.addNewTask(task3)
 
+      expect(toDoList.toDoList.length).toBe(3);
       expect(toDoList.deleteTask(task3.id)).toBe(200);
+      expect(toDoList.toDoList.length).toBe(2);
     });
   });
