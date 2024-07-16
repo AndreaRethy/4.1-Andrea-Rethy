@@ -14,7 +14,7 @@ describe('New To Do List', () => {
 
     test('should call addNewTask with task2', () => {
       const task2 = new Task({ "task" : "test task 2" });
-      toDoList.addNewTask(task2)
+      toDoList.addNewTask(task2);
 
       expect(toDoList.toDoList[1].task).toBe("test task 2");
     });
@@ -25,10 +25,19 @@ describe('New To Do List', () => {
 
     test('deletes new task', () => {
       const task3 = new Task({ "task" : "test task 3" });
-      toDoList.addNewTask(task3)
+      toDoList.addNewTask(task3);
 
       expect(toDoList.toDoList.length).toBe(3);
       expect(toDoList.deleteTask(task3.id)).toBe(200);
       expect(toDoList.toDoList.length).toBe(2);
+    });
+
+    test('updates task', () => {
+      const task3 = new Task({ "task" : "test task 3" });
+      toDoList.addNewTask(task3);
+
+      expect(toDoList.toDoList.length).toBe(3);
+      expect(toDoList.updateTask(task3.id, { "task" : "test task 3", "status": "done" })).toBe(2);
+      expect(toDoList.toDoList[2].status).toBe("done")
     });
   });
