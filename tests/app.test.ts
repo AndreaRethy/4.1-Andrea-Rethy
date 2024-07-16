@@ -17,5 +17,9 @@ describe('New To Do List', () => {
       toDoList.addNewTask(task2)
 
       expect(toDoList.toDoList[1].task).toBe("test task 2");
-    })
+    });
+
+    test('should return 404', () => {
+      expect(toDoList.deleteTask('superuniqueid')).toBe(404)
+    });
   });
