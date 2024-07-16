@@ -3,6 +3,7 @@ import Task from '../domain/entities/Task';
 // const express = require('express');
 import express from 'express';
 import cache from 'express-cache-ctrl';
+import cors from 'cors';
 import { validateTodo, validatePartialTodo } from './schemas/tasks';
 import toDoList from '../infrastructure/todo';
 
@@ -13,6 +14,7 @@ const PORT = process.env.PORT ?? 1234;
 app.disable('x-powered-by');
 app.use(express.json());
 app.use(cache.disable());
+app.use(cors());
 
 // GET
 app.get('/', (req, res) => {
