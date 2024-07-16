@@ -1,19 +1,18 @@
 // const { Task } = require('../domain/entities/Task.ts')
 import Task from '../domain/entities/Task';
-const express = require('express');
-// const crypto = require('node:crypto');
-// const { validateTodo, validatePartialTodo } = require('./schemas/tasks.ts');
+// const express = require('express');
+import express from 'express';
+import cache from 'express-cache-ctrl';
 import { validateTodo, validatePartialTodo } from './schemas/tasks';
 import toDoList from '../infrastructure/todo';
 
-
 const app = express();
-// const toDoList = require('../infrastructure/todo.json');
 const PORT = process.env.PORT ?? 1234;
 
-
+//Middleware
 app.disable('x-powered-by');
 app.use(express.json());
+app.use(cache.disable());
 
 // GET
 app.get('/', (req, res) => {
