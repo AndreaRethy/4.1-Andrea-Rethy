@@ -1,6 +1,4 @@
-// const { Task } = require('../domain/entities/Task.ts')
 import Task from '../domain/entities/Task';
-// const express = require('express');
 import express from 'express';
 import cache from 'express-cache-ctrl';
 import cors from 'cors';
@@ -41,11 +39,6 @@ app.post('/new-task', (req, res) => {
 // DELETE
 app.delete('/todo/:id', (req, res) => {
     const { id } = req.params
-    // const taskIndex = toDoList.findIndex(task => task.id === id)
-  
-    // if (taskIndex === -1) {
-    //   return res.status(404).json({ message: 'Task not found' })
-    // }
    
     if (toDoList.deleteTask(id) == 404) {
         return res.status(404).json({ message: 'Task not found' })
@@ -64,7 +57,6 @@ app.patch('/todo/:id', (req, res) => {
     }
 
     const { id } = req.params
-    // const updateTask = toDoList.updateTask(id, result.data)
 
     if (toDoList.updateTask(id, result.data) === -1) {
         return res.status(404).json({ message: 'task not found' })

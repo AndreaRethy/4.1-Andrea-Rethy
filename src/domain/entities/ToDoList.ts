@@ -45,8 +45,6 @@ class ToDoList {
             return taskIndex
             
         }
-
-        
 }
 
-export default ToDoList
+export default ToDoList;

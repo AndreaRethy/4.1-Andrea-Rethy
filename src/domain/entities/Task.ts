@@ -17,11 +17,6 @@ class Task {
         this.status = "to-do";
         Object.assign(this, data);
     }
-
-    // addNewTask(toDoList: Task[]): void {
-    //     toDoList.push(this);
-    // }
-
 }
 
 export default Task;
