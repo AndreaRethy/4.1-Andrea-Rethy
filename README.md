@@ -1,5 +1,7 @@
 # 4.1-Andrea-Rethy
 
+[![Test](https://github.com/AndreaRethy/4.1-Andrea-Rethy/actions/workflows/main.yml/badge.svg)](https://github.com/AndreaRethy/4.1-Andrea-Rethy/actions/workflows/main.yml)
+
 ## How the API works
 
 The default port is srt to be 1234, if you use a different port change the port number.
