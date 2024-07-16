@@ -4,7 +4,7 @@
 
 ## How the API works
 
-The default port is srt to be 1234, if you use a different port change the port number.
+The default port is set to be 1234, if you use a different port change the port number.
 
 ### To list all items in the todo list:
 
@@ -61,7 +61,7 @@ This should give an example output:
 
 ### Edit an item
 
-You can edit either the status or the name of any item based on the id number.
+You can edit either the status or the name of any item based on the id number. To test this copy a valid id number when doing the GET request.
 
 Example request:
 
@@ -86,7 +86,7 @@ Example output:
 
 ### Delete an item
 
-Just the id is needed:
+Just the id is needed.  To test this copy a valid id number when doing the GET request.
 
 ```
 DELETE http://localhost:1234/todo/c4b2eb63-60ae-44ea-a6e2-52666a0c3a0f
@@ -111,9 +111,11 @@ VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=humao.r
 ```
 
 2. Open the project folder in your terminal and start the server with the following command:
-
 ```
-npm run dev
+npx tsc
+```
+```
+npm run start
 ```
 
 3. Open the ./RESTClient/api.http file and click on "Send request" on the request you want to test. Feel free to change the example data.
