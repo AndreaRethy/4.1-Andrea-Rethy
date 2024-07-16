@@ -20,6 +20,13 @@ describe('New To Do List', () => {
     });
 
     test('should return 404', () => {
-      expect(toDoList.deleteTask('superuniqueid')).toBe(404)
+      expect(toDoList.deleteTask('superuniqueid')).toBe(404);
+    });
+
+    test('deletes new task', () => {
+      const task3 = new Task({ "task" : "test task 3" });
+      toDoList.addNewTask(task3)
+
+      expect(toDoList.deleteTask(task3.id)).toBe(200);
     });
   });
